@@ -2,7 +2,7 @@
   0%,
   95%,
   98% {
-    background-color: transparent;
+    background-color: black;
   }
   96%,
   99%,
@@ -21,25 +21,27 @@
 }
 /* @keyframes glow {
 } */
-/* @keyframes change-color-nose {
+@keyframes change-color-whisker {
+  from {
+    border: solid 3px black;
+    border-color: black transparent transparent transparent;
+  }
+  to {
+    border: solid 3px grey;
+    border-color: grey transparent transparent transparent;
+  }
+}
+@keyframes change-color-nose {
   from {
     background-color: black;
   }
   to {
     background-color: white;
   }
-} */
-/* @keyframes change-color-whisker {
-  from {
-    background-color: black;
-  }
-  to {
-    background-color: grey;
-  }
-} */
+}
 body {
-  background-color: black;
-  /* animation: flash 4s linear infinite; */
+  background-color: white;
+  animation: flash linear 5s infinite;
 }
 .lightning {
   top: 0;
@@ -51,7 +53,7 @@ body {
   height: 100%;
   overflow: hidden;
   position: absolute;
-  animation: flash 10s linear infinite;
+  /* animation: flash 10s linear infinite; */
 }
 .cat {
   width: 480px;
@@ -119,7 +121,7 @@ body {
   position: relative;
   top: 160px;
   left: 170px;
-  /* animation: change-color-nose 2s linear infinite; */
+  animation: change-color-nose 4s ease-in-out infinite;
 }
 .whiskers-right {
   position: relative;
@@ -139,5 +141,5 @@ body {
   border: solid 3px black;
   border-color: black transparent transparent transparent;
   border-radius: 60%/30px 30px 0 0;
-  /* animation: change-color-whisker 4s ease-in-out infinite; */
+  animation: change-color-whisker 4s ease-in-out infinite;
 }
