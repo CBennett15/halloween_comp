@@ -19,14 +19,42 @@
     top: 25px;
   }
 }
-/* @keyframes glow {
-} */
+@keyframes glow {
+  0% {
+    opacity: 0.8;
+    width: 120px;
+    height: 50px;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+    width: 120px;
+    height: 60px;
+  }
+  52% {
+    opacity: 1;
+    width: 120px;
+    height: 60px;
+  }
+  55% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
 @keyframes change-color-whisker {
-  from {
+  0%,
+  95%,
+  98% {
     border: solid 3px black;
     border-color: black transparent transparent transparent;
   }
-  to {
+  96%,
+  99%,
+  100% {
     border: solid 3px grey;
     border-color: grey transparent transparent transparent;
   }
@@ -43,18 +71,7 @@ body {
   background-color: white;
   animation: flash linear 5s infinite;
 }
-.lightning {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: absolute;
-  /* animation: flash 10s linear infinite; */
-}
+
 .cat {
   width: 480px;
   margin: 20px auto;
@@ -96,7 +113,6 @@ body {
   position: relative;
   top: 25px;
   left: 53px;
-  animation: glow 15s ease-in-out infinite;
 }
 .eye {
   width: 120px;
@@ -104,14 +120,16 @@ body {
   background-color: red;
   box-shadow: 0px 0px 20px red;
   float: left;
-  border-radius: 75% 5% 100% 0;
-  transform: rotate(-140deg);
+  border-radius: 5% 75% 0 100%;
+
+  transform: rotate(-35deg);
+  animation: glow 5s linear infinite;
 }
 
 .eye-left {
   margin-right: 60px;
-  border-radius: 5% 75% 0 100%;
-  transform: rotate(140deg);
+  border-radius: 75% 5% 100% 0;
+  transform: rotate(35deg);
 }
 .nose {
   width: 45px;
@@ -121,7 +139,7 @@ body {
   position: relative;
   top: 160px;
   left: 170px;
-  animation: change-color-nose 4s ease-in-out infinite;
+  animation: change-color-nose 5s ease-in-out infinite;
 }
 .whiskers-right {
   position: relative;
@@ -141,5 +159,5 @@ body {
   border: solid 3px black;
   border-color: black transparent transparent transparent;
   border-radius: 60%/30px 30px 0 0;
-  animation: change-color-whisker 4s ease-in-out infinite;
+  animation: change-color-whisker 5s ease-in-out infinite;
 }
