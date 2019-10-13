@@ -20,29 +20,19 @@
   }
 }
 @keyframes glow {
-  0% {
+  0%,
+  95%,
+  98% {
     opacity: 0.8;
     width: 120px;
     height: 50px;
   }
-  25% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-    width: 120px;
-    height: 60px;
-  }
-  52% {
-    opacity: 1;
-    width: 120px;
-    height: 60px;
-  }
-  55% {
-    opacity: 1;
-  }
+  96%,
+  98%,
   100% {
-    opacity: 0.8;
+    opacity: 1;
+    width: 120px;
+    height: 120px;
   }
 }
 @keyframes change-color-whisker {
