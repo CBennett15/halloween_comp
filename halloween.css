@@ -50,10 +50,14 @@
   }
 }
 @keyframes change-color-nose {
-  from {
+  0%,
+  95%,
+  98% {
     background-color: black;
   }
-  to {
+  96%,
+  99%,
+  100% {
     background-color: white;
   }
 }
