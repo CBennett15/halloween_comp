@@ -1,57 +1,3 @@
-@keyframes flash {
-  0%,
-  90%,
-  98% {
-    background-color: black;
-  }
-  95%,
-  96%,
-  99%,
-  100% {
-    background-color: white;
-  }
-}
-
-@keyframes move-ears {
-  from {
-    top: 0;
-  }
-  to {
-    top: 25px;
-  }
-}
-@keyframes glow {
-  0%,
-  95%,
-  98% {
-    opacity: 0.8;
-    width: 120px;
-    height: 50px;
-  }
-  96%,
-  98%,
-  100% {
-    opacity: 1;
-    width: 120px;
-    height: 120px;
-  }
-}
-
-@keyframes change-color-scratch {
-  0%,
-  90%,
-  98% {
-    border: solid 3px black;
-    border-color: black transparent transparent transparent;
-  }
-  96%,
-  99%,
-  100% {
-    border: solid 3px red;
-    border-color: red transparent transparent transparent;
-  }
-}
-
 body {
   background-color: white;
   animation: flash linear 5s infinite;
@@ -152,7 +98,7 @@ body {
 }
 .scratches-left {
   position: relative;
-  left: 330px;
+  left: 450px;
   bottom: 10px;
   transform: rotate(-75deg);
 }
@@ -163,4 +109,57 @@ body {
   border-color: black transparent transparent transparent;
   border-radius: 60%/30px 30px 0 0;
   animation: change-color-scratch 5s linear infinite;
+}
+@keyframes flash {
+  0%,
+  90%,
+  98% {
+    background-color: black;
+  }
+  95%,
+  96%,
+  99%,
+  100% {
+    background-color: white;
+  }
+}
+
+@keyframes move-ears {
+  from {
+    top: 0;
+  }
+  to {
+    top: 25px;
+  }
+}
+@keyframes glow {
+  0%,
+  95%,
+  98% {
+    opacity: 0.8;
+    width: 120px;
+    height: 50px;
+  }
+  96%,
+  98%,
+  100% {
+    opacity: 1;
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@keyframes change-color-scratch {
+  0%,
+  90%,
+  98% {
+    border: solid 3px black;
+    border-color: black transparent transparent transparent;
+  }
+  96%,
+  99%,
+  100% {
+    border: solid 3px red;
+    border-color: red transparent transparent transparent;
+  }
 }
