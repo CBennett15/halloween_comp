@@ -1,9 +1,10 @@
 @keyframes flash {
   0%,
-  95%,
+  90%,
   98% {
     background-color: black;
   }
+  95%,
   96%,
   99%,
   100% {
@@ -35,9 +36,10 @@
     height: 120px;
   }
 }
-@keyframes change-color-whisker {
+
+@keyframes change-color-scratch {
   0%,
-  95%,
+  90%,
   98% {
     border: solid 3px black;
     border-color: black transparent transparent transparent;
@@ -45,22 +47,11 @@
   96%,
   99%,
   100% {
-    border: solid 3px grey;
-    border-color: grey transparent transparent transparent;
+    border: solid 3px red;
+    border-color: red transparent transparent transparent;
   }
 }
-@keyframes change-color-nose {
-  0%,
-  95%,
-  98% {
-    background-color: black;
-  }
-  96%,
-  99%,
-  100% {
-    background-color: white;
-  }
-}
+
 body {
   background-color: white;
   animation: flash linear 5s infinite;
@@ -83,7 +74,7 @@ body {
   height: 65px;
   position: relative;
   left: 35px;
-  animation: move-ears 2s infinite alternate-reverse;
+  animation: move-ears 1s infinite alternate-reverse;
 }
 .ear {
   width: 0;
@@ -133,7 +124,6 @@ body {
   position: relative;
   top: 160px;
   left: 170px;
-  animation: change-color-nose 5s ease-in-out infinite;
 }
 .whiskers-right {
   position: relative;
@@ -148,10 +138,29 @@ body {
   transform: rotate(-10deg);
 }
 .whisker {
-  width: 260px;
+  width: 240px;
   height: 5px;
   border: solid 3px black;
   border-color: black transparent transparent transparent;
   border-radius: 60%/30px 30px 0 0;
-  animation: change-color-whisker 5s ease-in-out infinite;
+}
+.scratches-right {
+  position: relative;
+  left: -200px;
+  top: 150px;
+  transform: rotate(65deg);
+}
+.scratches-left {
+  position: relative;
+  left: 330px;
+  bottom: 10px;
+  transform: rotate(-75deg);
+}
+.scratch {
+  width: 400px;
+  height: 10px;
+  border: solid 3px black;
+  border-color: black transparent transparent transparent;
+  border-radius: 60%/30px 30px 0 0;
+  animation: change-color-scratch 5s linear infinite;
 }
